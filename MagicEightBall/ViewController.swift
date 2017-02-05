@@ -45,7 +45,6 @@ class ViewController: UIViewController {
             chosenAnswer = "It's not the spoon that moves, but you..."
         }
         
-        
         return chosenAnswer
     }
     
@@ -85,7 +84,7 @@ class ViewController: UIViewController {
         case 3:
             chosenAnswer = "Outlook not so good"
         case 4:
-            chosenAnswer = "Very doubtful"            
+            chosenAnswer = "Very doubtful"
         default:
             chosenAnswer = "It's not the spoon that moves, but you..."
         }
@@ -96,13 +95,48 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        triangleBackground.isHidden = true
+        triangleBackground.alpha = 0
+        textInsideTriangle.alpha = 0
     }
 
+    // when "buttonWasPressed" is ran, it thinks of a random number between 0 and 30 and then sees if that number is equal to, less than, or greater than the length of the string that was entered. Then it grabs a string using the getAnswer functions above based on the result of that comparison.
+    
     @IBAction func buttonWasPressed(_ sender: Any) {
+        // Dismisses the keyboard once the button is pressed
+        textEnteredByUser.resignFirstResponder()
+        
+        let randomNumber = arc4random_uniform(30)
+        let textFromUser: String = textEnteredByUser.text!
         
         
+        if Int(randomNumber) > textFromUser.characters.count {
+            textInsideTriangle.text = getNegativeAnswer()
+        }
+        else if Int(randomNumber) == textFromUser.characters.count {
+            textInsideTriangle.text = getNeutralAnswer()
+        }
+        else if Int(randomNumber) < textFromUser.characters.count {
+            textInsideTriangle.text = getPositiveAnswer()
+        }
+        else {
+            print("Something went wrong in the buttonWasPressed function")
+        }
         
+        print("\n---------------------")
+        print("textFromUser = \(textFromUser.characters.count)")
+        print("randomNumber = \(randomNumber)")
+        print("MPI is \(M_PI * 3)")
+        
+        UIView.animate(withDuration: 3) {
+            self.triangleBackground.alpha = 1
+            self.triangleBackground.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI * 3))
+        }
+        
+        
+        UIView.animate(withDuration: 2, delay: 2, animations: {
+            self.textInsideTriangle.alpha = 1
+            }
+        )
     }
     
     override func didReceiveMemoryWarning() {

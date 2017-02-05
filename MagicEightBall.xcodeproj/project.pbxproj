@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E5472E61E47DF4D008F9C70 /* 8ball-triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E5472E51E47DF4D008F9C70 /* 8ball-triangle.png */; };
 		0E5E32B31E46A80700E5AFA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E32B21E46A80700E5AFA8 /* AppDelegate.swift */; };
 		0E5E32B51E46A80700E5AFA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E32B41E46A80700E5AFA8 /* ViewController.swift */; };
 		0E5E32B81E46A80700E5AFA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5E32B61E46A80700E5AFA8 /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		0E5E32D31E46A80700E5AFA8 /* MagicEightBallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E32D21E46A80700E5AFA8 /* MagicEightBallUITests.swift */; };
 		0EB5A0971E47ABEF00737D9B /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EB5A0941E47ABEF00737D9B /* square.png */; };
 		0EB5A0981E47ABEF00737D9B /* Thick Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EB5A0951E47ABEF00737D9B /* Thick Circle.png */; };
-		0EB5A09A1E47AC9C00737D9B /* 8ball-triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EB5A0991E47AC9C00737D9B /* 8ball-triangle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E5472E51E47DF4D008F9C70 /* 8ball-triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8ball-triangle.png"; sourceTree = SOURCE_ROOT; };
 		0E5E32AF1E46A80700E5AFA8 /* MagicEightBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicEightBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5E32B21E46A80700E5AFA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E5E32B41E46A80700E5AFA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		0E5E32D41E46A80700E5AFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EB5A0941E47ABEF00737D9B /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = SOURCE_ROOT; };
 		0EB5A0951E47ABEF00737D9B /* Thick Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thick Circle.png"; sourceTree = SOURCE_ROOT; };
-		0EB5A0991E47AC9C00737D9B /* 8ball-triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8ball-triangle.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 		0E5E32B11E46A80700E5AFA8 /* MagicEightBall */ = {
 			isa = PBXGroup;
 			children = (
-				0EB5A0991E47AC9C00737D9B /* 8ball-triangle.png */,
+				0E5472E51E47DF4D008F9C70 /* 8ball-triangle.png */,
 				0EB5A0941E47ABEF00737D9B /* square.png */,
 				0EB5A0951E47ABEF00737D9B /* Thick Circle.png */,
 				0E5E32B21E46A80700E5AFA8 /* AppDelegate.swift */,
@@ -245,7 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EB5A0981E47ABEF00737D9B /* Thick Circle.png in Resources */,
-				0EB5A09A1E47AC9C00737D9B /* 8ball-triangle.png in Resources */,
+				0E5472E61E47DF4D008F9C70 /* 8ball-triangle.png in Resources */,
 				0E5E32BD1E46A80700E5AFA8 /* LaunchScreen.storyboard in Resources */,
 				0E5E32BA1E46A80700E5AFA8 /* Assets.xcassets in Resources */,
 				0EB5A0971E47ABEF00737D9B /* square.png in Resources */,
