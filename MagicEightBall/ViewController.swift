@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textInsideTriangle: UILabel!
     
+    var buttonAlreadyPressed: Bool = false
+    
+    var amountTriangleRotated: CGFloat = CGFloat(M_PI * 3)
+    
     func getPositiveAnswer () -> String {
         var chosenAnswer = ""
         let randomchoice = arc4random_uniform(10)
@@ -125,18 +129,34 @@ class ViewController: UIViewController {
         print("\n---------------------")
         print("textFromUser = \(textFromUser.characters.count)")
         print("randomNumber = \(randomNumber)")
-        print("MPI is \(M_PI * 3)")
+        print("MPI is \(amountTriangleRotated * 3)")
         
-        UIView.animate(withDuration: 3) {
-            self.triangleBackground.alpha = 1
-            self.triangleBackground.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI * 3))
+        if buttonAlreadyPressed == true {
+            
+            UIView.animate(withDuration: 1, delay: 0.0, options: [.curveEaseIn, .curveEaseOut], animations: {
+                self.textInsideTriangle.alpha = 0
+                self.triangleBackground.alpha = 0
+                self.triangleBackground.transform = CGAffineTransform(rotationAngle: self.amountTriangleRotated * 2.5)
+                },
+                completion: { finished in
+                    
+                    UIView.animate(withDuration: 1, delay: 0.0, options: [.curveEaseIn, .curveEaseOut], animations: {
+                        self.textInsideTriangle.alpha = 1
+                        self.triangleBackground.alpha = 1
+                        self.triangleBackground.transform = CGAffineTransform(rotationAngle: self.amountTriangleRotated)
+                    })
+            })
+            
+        } else {
+            UIView.animate(withDuration: 2, delay: 0.0, options: [.curveEaseIn, .curveEaseOut], animations: {
+                self.textInsideTriangle.alpha = 1
+                self.triangleBackground.alpha = 1
+                self.triangleBackground.transform = CGAffineTransform(rotationAngle: self.amountTriangleRotated)
+                }
+            )
         }
         
-        
-        UIView.animate(withDuration: 2, delay: 2, animations: {
-            self.textInsideTriangle.alpha = 1
-            }
-        )
+        buttonAlreadyPressed = true
     }
     
     override func didReceiveMemoryWarning() {
